@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Me</title>
+  <meta name="description" content="">
+  <meta name="bmn" content="aboutme">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.ico">
+    <style>
+    .dropbtn {
+    background-color: #d8d8d8;
+    color: #270922;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: linen;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: lavender;
+}
+</style>
+    <style>
+    
+        @media (max-width: 404px){ body {
+    
+            background-color: #270922;}}
+
+        @media (min-width: 405px) {
+body{
+    
+    background-color: #66b2b2;}}
+        @media (min-width: 900px){ body {
+            background-color: #501037;}}
+        
+        .text {
+            background-color: #d8d8d8;
+            padding: 2em;
+        }
+h1 {
+    color: #501037;
+        }
+p {
+    color: #270922;
+        }
+        img{
+        width: 300px;
+        height: auto;}
+        
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+  </div>
+</div>
+  <div class="media">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <div class="text">
+            <h1>About Me</h1>
+            <div class="img">
+          <img
+	srcset="mesmall.jpg  460w, 
+	        memedium.jpg  960w,
+	        melarge.jpg   1280w"
+               src="me.jpg" alt="Brittney Nielsen">
+            <p>  Hi, Welcome to my bio page - which contains some random facts about me: <br> I am 28 years old, I live with my S/O of 8 years and our Australian Shepherd, Leonard; we bought our first home last year. <br> I am still somewhat new to coding, but I find it very interesting and engaging. I also am a decent artist! I used to do some of the sign art when i worked at the Redmond, WA Mudbay.</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
