@@ -46,7 +46,147 @@
 }
 
 .dropdown:hover .dropbtn {
-    background-color: lavender;
+    background-color: lavender;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Me</title>
+  <meta name="description" content="">
+  <meta name="bmn" content="aboutme">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="svg-injector.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.ico">
+    
+<style>
+    .dropbtn {
+    background-color: #d8d8d8;
+    color: #270922;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+    .icon-pacman {
+            font-size: 7em;
+            animation: pacman 2s /*alternate*/ infinite;
+        }
+        
+        @keyframes pacman { 
+            0%, 50%{color:fuchsia}
+            50%, 100% {color:yellow}
+            100% {color: fuchsia} 
+        }
+        
+    .icon-home {
+            font-size: 3em;
+            color: lightgray;
+        }
+        
+    .icon-camera {
+            font-size: 2em;
+            color: lavender;
+        }
+        
+    .icon-diamonds {
+            font-size: 1em;
+            color:antiquewhite;
+        }
+        
+    .icon-pencil2 {
+            font-size: 1em;
+            color: ghostwhite;
+        }
+        
+    #kiwi-bird {
+            width: 10em;
+            height: auto;
+            display: block;
+            margin: 100px auto;
+            animation: kiwi 2s /*alternate*/ infinite;
+        }
+    
+    @keyframes kiwi { 
+            0%, 50%{fill:gray}
+            50%, 100% {fill:paleturquoise}
+            100% {fill: gray} 
+        }
+    
+    #kiwi-bird:hover {
+            fill-opacity: 0.5;
+            stroke: lawngreen;
+            stroke-dasharray: 10;
+            stroke-width: 6;
+        }
+        
+    .dropdown {
+        position: relative;
+        display: inline-block;
+}
+
+    .dropdown-content {
+            display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+}
+
+    .dropdown-content a:hover {background-color: linen;}
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+}
+
+    .dropdown:hover .dropbtn {
+        background-color: lavender;
+}   
+        @media (max-width: 404px){ body {
+    
+        background-color: #270922;}}
+
+        @media (min-width: 405px) {
+    body{
+    
+        background-color: #66b2b2;}}
+        
+        @media (min-width: 900px){ body {
+            background-color: #501037;}}
+        
+        .img {
+            /*padding: .0001em;*/
+            padding-top: -5em;
+            margin:-.50em;
+            margin-top: -3em;
+        }
+    </style>
+</head>
+<body>
+    <span class="icon-pacman"> </span>
+    <span class="icon-home"> </span>
+    <span class="icon-camera"> </span>
+    <span class="icon-diamonds"> </span>
+    <span class="icon-pencil2"> </span>
+    <img id="kiwi-bird" class="inject-me"  src="kiwi.svg" alt="bird">
+<script>
+  // Elements to inject
+  var mySVGsToInject = document.querySelectorAll('img.inject-me');
+
+  // Do the injection
+  SVGInjector(mySVGsToInject);
+</script>
+</body>
+</html>
+
 }
 </style>
     <style>
