@@ -1,0 +1,166 @@
+h1 {
+font-family: 'Great Vibes', cursive;
+    color: #969dab;
+
+}
+
+h3{
+    font-family: 'Great Vibes', cursive;
+    color: blue;
+    background-color: gainsboro;
+}
+
+p {
+    color:blue;
+    text-shadow: black 2em;
+    font-family: 'mukta', sans-serif;
+    background-color: #f1f1f1;
+}
+
+.img {
+    position: relative;
+    float: left;
+    width:  5500px;
+    height: 5500px;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.header{
+    padding: 60px;
+    text-align: center;
+    background-color: #292b94;
+}
+
+.main-content{  
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    number: 1;
+}
+
+.galleries {
+    background-color: linen;
+    padding: 20px;
+}
+
+.gallery1 img:hover {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+@media (max-width: 400px) {
+    .main-content, .menu-nav{   
+        flex-direction: column; 
+    }
+
+    .gallery1 img {
+        width : 200px;
+        height : autopx;
+    }
+
+    .menu-nav {
+        display: none;
+        background-color: #333;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menu-bar {
+        color: white;
+        font-weight: bold;
+        background-color: #333;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+@media (min-width: 901px) {
+    .gallery1 img {
+        width : 400px;
+        height : autopx;
+    }
+
+    .menu-button{
+        display: none;
+        color: #292B54;
+        padding: 2em;
+    }
+
+    .menu-nav {
+        display: flex;
+        background-color: #333;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+    .menu-nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-content, .menu-nav{   
+        flex-direction: column; 
+    }
+
+    .gallery1 img {
+        width : 200px;
+        height : autopx;
+    }
+
+    .menu-nav {
+        display: none;
+        background-color: #333;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menu-bar {
+        color: white;
+        font-weight: bold;
+        background-color: #333;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-bar:hover .menu-nav{
+         display: flex;
+    }
+
+    .menu-nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+    .menu-nav a:hover {
+        background-color: #ddd;
+        color: black;
+        display: block;
+    }
