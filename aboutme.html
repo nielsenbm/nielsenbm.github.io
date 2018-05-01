@@ -7,128 +7,181 @@
   <meta name="bmn" content="aboutme">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <style>
+    .topnav {
+      overflow: hidden;
+      background-color: #d8d8d8;
+      color: #270922;
+    }
 
-    <style>
-.topnav {
-  overflow: hidden;
- background-color: #d8d8d8;
- color: #270922;
-}
+    .topnav a {
+      float: left;
+      display: block;
+      color: #501037;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #501037;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    .active {
+      background-color: #66b2b2;
+      color: white;
+    }
 
-.active {
-  background-color: #66b2b2;
-  color: white;
-}
+    .topnav .icon {
+      display: none;
+    }
 
-.topnav .icon {
-  display: none;
-}
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-</style>
+    .text {
+      background-color: #d8d8d8;
+      padding: 2em;
+    }
+    header, h1 {
+      color: #501037;
+      background-color: #d8d8d8;
+    }
+    p {
+      color: #270922;
+      background-color: #d8d8d8;
+      padding: 3em;
+      word-wrap: break-word;
+    }
 
-    <style>
-        .text {
-            background-color: #d8d8d8;
-            padding: 2em;
+    #myPortraitImage{
+      width: 300px;
+      height: auto;
+      border-radius: 25%;
+      position: sticky;
+      left: 50px;
+      top: 10px;
+
+      z-index: 1;
+    }
+    /*margin-left: 2em;}*/
+
+    @media (max-width: 404px){ 
+      body {
+
+        background-color: #270922;} img {max-width: 404px;
         }
-header, h1 {
-    color: #501037;
-    background-color: #d8d8d8;
-        }
-p {
-    color: #270922;
-    background-color: #d8d8d8;
-    padding: 3em;
-    word-wrap: break-word;
-        }
-        
-        img{
-        width: 300px;
-        height: auto;
-        border-radius: 25%;
-            position: sticky;
-            left: 50px;
-            top: 10px;
-            
-            z-index: 1;}
-        /*margin-left: 2em;}*/
-    
-        @media (max-width: 404px){ body {
-    
-            background-color: #270922;} img {max-width: 404px;}}
+      }
 
-        @media (min-width: 405px) {
-body{
-    
-    background-color: #66b2b2;}} 
-        @media (min-width: 900px){ body {
-            background-color: #501037;} img{ margin-left: auto; max-width: 900px;}}
-        
-              @media screen and (min-width: 410px) {
-  main { 
-    float:none;
-    width: 50%; 
-    align-content: center;
-      justify-content: center;
-      margin-left: 150px;
-      margin-right: auto;
-      margin-top: 5;}
-                  
-    img {
+      @media (min-width: 405px) {
+        body{
+          background-color: #66b2b2;
+        }
+      } 
+      @media (min-width: 900px){ 
+        body {
+          background-color: #501037;
+        } 
+        #myPortraitImage{ margin-left: auto; max-width: 900px;
+        }
+      }
+
+      @media screen and (min-width: 410px) {
+        main { 
+          float:none;
+          width: 50%; 
+          align-content: center;
+          justify-content: center;
+          margin-left: 150px;
+          margin-right: auto;
+          margin-top: 5;}
+
+          #myPortraitImage {
            align-content: center;
-        align-items: center;
-        justify-content: center;
-                  }}
-        
-        @media screen and (min-width: 900px) {
-  body { 
-    float:none;
-    width: 50%; 
-    align-content: center;
-      justify-content: center;
-      margin-left: 350px;
-      margin-top: 5;
-  }
+           align-items: center;
+           justify-content: center;
+         }
+       }
+
+       @media screen and (min-width: 900px) {
+        body { 
+          float:none;
+          width: 50%; 
+          align-content: center;
+          justify-content: center;
+          margin-left: 350px;
+          margin-top: 5;
+        }
+      }
+
+      #demo {
+
+      }
+
+      #scoreDisplay {
+        font-size:40px;
+        text-align:center;
+      }
+
+      #animate1 {
+        position: relative;
+        width: 150px;
+        height: 60px;
+        background-position: 0px 4px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #animate1 p {
+        font-size:17px;
+        margin-top: 0px;
+        margin-left: 60px;
+        line-height: 58px;
+      }
+
+
+
+      #logo-bkg {
+  width: 692px;
+  height: 70px;
+  padding: 8px;
 }
-        
-        
-        
+#animateDemo {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  background-position: 0px 4px;
+}
+#animateDemo p {
+  font-size:17px;
+  margin-top: 0px;
+  margin-left: 60px;
+  line-height: 58px;
+}
+
+
     </style>
 
       <!-- <nav class="dropdown">
@@ -140,39 +193,60 @@ body{
     <a href="gallery.html">Gallery</a>  
   </div>
 </nav> -->
-    
-    <script>
-function myFunction() {
+
+<script>
+  function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
-        x.className += " responsive";
+      x.className += " responsive";
     } else {
-        x.className = "topnav";
+      x.className = "topnav";
     }
-}
+  }
 </script>
 </head>
 <body>
-    <nav class="topnav" id="myTopnav">
-  <a href="index.html">Home</a>
+  <nav class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
     <a href="aboutme.html" class="active">About Me</a>
     <a href="svg-icons/index.html">SVG</a>
     <a href="gallery.html">Gallery</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</nav>
-        
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </nav>
+
   <div class="media"  style="margin-top: 15%">
-          <div class="text">
-            
-              <header><h1>About Me</h1></header>
-            <main class="img">
-          <img
-	srcset="mesmall.jpg  460w, 
-	        memedium.jpg  960w,
-	        melarge.jpg   1280w"
-               src="me.jpg" alt="Brittney Nielsen">
-            <p>  Hi, Welcome to my bio page - which contains some random facts about me: <br> I am 28 years old, I live with my S/O of 8 years and our Australian Shepherd, Leonard; we bought our first home last year. <br> I am still somewhat new to coding, but I find it very interesting and engaging. I also am a decent artist! <br> I used to do some of the sign art when i worked at the Redmond, WA Mudbay.</p></main>
+    <div class="text">
+
+
+<div id="logo-bkg">
+     <div id="animateDemo">
+      <header><h1 class="myHeaderText" id="myHeaderText">About Me</h1></header>
     </div>
+</div>
+    
+      <img
+      srcset="mesmall.jpg  460w, 
+      memedium.jpg  960w,
+      melarge.jpg   1280w"
+      src="me.jpg" alt="Brittney Nielsen" id="myPortraitImage">
+      <p>  Hi, Welcome to my bio page - which contains some random facts about me: 
+        <br> I am 28 years old, I live with my S/O of 8 years and our Australian Shepherd, Leonard; we bought our first home last year. 
+        <br> I am still somewhat new to coding, but I find it very interesting and engaging. I also am a decent artist! 
+        <br> I used to do some of the sign art when i worked at the Redmond, WA Mudbay.
+      </p>
   </div>
+</div>
+
+<script>
+  window.onload = function() {
+    var logo = document.getElementById("animateDemo");
+    TweenLite.from(logo, 1.5, {left:"542px"});
+
+    var myImg = document.getElementById("myPortraitImage")
+    TweenLite.from(myImg, 1, {width:"1000px"});
+  }
+
+
+</script>
 </body>
 </html>
