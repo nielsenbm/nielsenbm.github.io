@@ -1,0 +1,16 @@
+@mixin grey_bkg_with_border_type_of($variable) {
+	background-color: darkgray;
+	border: $variable;
+}
+
+@mixin centered_background_image_of_zip {
+	background-image: url('zip.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@mixin use_my_cool_style_with_color($my_color) {
+	background-color: $my_color;
+	font-size: 80px;
+}

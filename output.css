@@ -1,0 +1,42 @@
+.siteContent {
+  width: 100%;
+  height: 100%;
+  color: purple;
+}
+
+.menu {
+  display: inline center;
+  text-align: center;
+  background-color: darkgray;
+  border: 1px dashed purple;
+  background-color: #84eed5;
+  font-size: 80px;
+}
+
+.top-section {
+  background-color: darkgray;
+  border: 1px dotted purple;
+}
+
+.first-section {
+  background-image: url("zip.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #84eed5;
+  font-size: 80px;
+}
+
+.second-section {
+  background-color: darkgray;
+  border: 4px dotted purple;
+}
+
+.bottom-content {
+  background-color: #84eed5;
+  font-size: 80px;
+  display: flex;
+  height: 100%;
+}
+
+/*# sourceMappingURL=output.css.map */

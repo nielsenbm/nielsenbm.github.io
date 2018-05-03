@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["my-sass.scss","_mymixins.scss"],"names":[],"mappings":"AAQA;EACC;EACA;EACA,OAPoB;;;AAUrB;EACC;EACA;ECfA;EACA,QDGc;ECQd,kBDXmB;ECYnB;;;ADUD;ECvBC;EACA,QDuBsC;;;AAGvC;ECtBC;EACG;EACA;EACA;EAIH,kBDXmB;ECYnB;;;ADoBD;ECjCC;EACA,QDiCsC;;;AAGvC;ECzBC,kBDXmB;ECYnB;ED2BC;EAEA","file":"output.css"}

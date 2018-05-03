@@ -1,0 +1,45 @@
+@import 'mymixins';
+
+$my-favorite-color: #84eed5;
+
+$main-content-color: purple;
+$menu-border : 1px dashed $main-content-color;
+$base-border-for-content-sections : dotted $main-content-color;
+
+.siteContent{
+	width:100%;
+	height:100%;
+	color: $main-content-color;
+}
+
+.menu {
+	display: inline center;
+	text-align: center;
+
+	@include grey_bkg_with_border_type_of($menu-border);
+
+	@include use_my_cool_style_with_color($my-favorite-color);
+	
+}
+
+.top-section {
+	@include grey_bkg_with_border_type_of(1px $base-border-for-content-sections);
+}
+
+.first-section {
+
+	@include centered_background_image_of_zip;
+	@include use_my_cool_style_with_color($my-favorite-color);
+}
+
+.second-section {
+	@include grey_bkg_with_border_type_of(4px $base-border-for-content-sections);
+}
+
+.bottom-content {
+  @include use_my_cool_style_with_color($my-favorite-color);
+
+  display: flex;
+
+  height: 100%;
+}
