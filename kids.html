@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to the farm!</title>
+  <meta name="Gallery" content="Photo Gallery">
+  <meta name="BMN" content="Kids Site content page">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="KIDSimages/cow.ico">    
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="https://fonts.googleapis.com/css?family=Henny+Penny|Shadows+Into+Light" rel="stylesheet">
+    
+  <!-----css and jquery sheets----->
+    
+<link rel="stylesheet" href="kids.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    
+    
+    
+    </head>
+        <body>
+
+  <!-- Primary Page Layout -->   
+        <header><h1>WELCOME TO THE FARM!</h1>
+            
+                <nav class="topnav" id="myTopnav">
+    <button id="home" class="home"><a id="home" href="kidsintro.html"></a></button>
+    <button id="about" class="about"><a id="about" href="aboutme.html"></a></button>
+    <button id="gallery" class="gallery"><a id="gallery" href="https://nielsenbm.github.io/gallery.html"></a></button>
+</nav>
+        <p>Poppy the blue heeler and Bess the cat are here hanging out with Olga the cow.</p>
+        </header>
+    
+    <Main>
+ <section>                       
+<div class="animalText catText">
+<h2>Bess The Cat</h2>
+</div>
+    <div id="container">
+    <div id="cat"></div>
+    </div>
+   
+<div class="animalText dogText">
+<h2>Poppy The Dog</h2>
+</div>
+    <div id="container">
+    <div id="dog"></div>
+    </div>
+
+<div class="animalText cowText">
+<h2>Olga The Cow</h2>
+</div>
+    <div id="container">
+    <div id="cow"></div>
+    </div></section>
+    
+            
+<script>
+    var rotateCD,
+    pauseTween,
+    playBtn  = document.getElementById("play"),
+    pauseBtn = document.getElementById("pause"),
+    dogAudio    = document.createElement("audio"),
+    catAudio    = document.createElement("audio"),
+    cowAudio    = document.createElement("audio"),    
+    dog = document.getElementById("dog"),
+    cat = document.getElementById("cat");
+    cow = document.getElementById("cow");
+    dogAudio.loop = false; 
+    dogAudio.src  = "bark.mp3";
+    catAudio.loop = false;
+    catAudio.src  = "meow.mp3"
+    cowAudio.loop = false;
+    cowAudio.src  = "moo.mp3"
+
+    rotateDog = new TweenMax("#dog", 1.5, {
+      rotation: -360, 
+      ease: Linear.easeNone,
+      repeat: 1,
+      paused: true 
+      }).timeScale(0);
+
+
+    rotateCat = new TweenMax("#cat", 1.5, {
+      rotation: 360, 
+      ease: Linear.easeNone,
+      repeat: 1,
+      paused: true 
+      }).timeScale(0);
+    
+    rotateCow = new TweenMax("#cow", 1.5, {
+      rotation: 360, 
+      ease: Linear.easeNone,
+      repeat: 1,
+      paused: true 
+      }).timeScale(0);
+
+dog.onclick = function() {
+   rotateDog.play();
+   TweenLite.to(rotateDog, 1, { timeScale: 1 });
+   dogAudio.play();
+};
+
+cat.onclick = function() {
+   rotateCat.play();
+   TweenLite.to(rotateCat, 3, { timeScale: 1 });
+   catAudio.play();
+}
+    
+cow.onclick = function() {
+   rotateCow.play();
+   TweenLite.to(rotateCow, 1, { timeScale: 1 });
+   cowAudio.play();
+}
+
+$(".animalText").on("mouseenter", function() {
+  var duration = 1;
+  TweenMax.to(this, duration / 4, {y:-50, ease:Power2.easeOut});
+  TweenMax.to(this, duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+});
+    </script>
+        <footer><h2>&copy; BMN 2018</h2><p>Gsap use inspired by jack doyle/greensock &copy;</p></footer></Main>
+    </body>
+</html>
