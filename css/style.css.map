@@ -1,0 +1,21 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../node_modules/susy/sass/_susy.scss",
+		"../node_modules/susy/sass/_susy-prefix.scss",
+		"../node_modules/susy/sass/_version.scss",
+		"../node_modules/susy/sass/susy/_utilities.scss",
+		"../node_modules/susy/sass/susy/_su-validate.scss",
+		"../node_modules/susy/sass/susy/_su-math.scss",
+		"../node_modules/susy/sass/susy/_settings.scss",
+		"../node_modules/susy/sass/susy/_normalize.scss",
+		"../node_modules/susy/sass/susy/_parse.scss",
+		"../node_modules/susy/sass/susy/_syntax-helpers.scss",
+		"../node_modules/susy/sass/susy/_api.scss",
+		"../node_modules/susy/sass/susy/_unprefix.scss"
+	],
+	"names": [],
+	"mappings": "AAQA,AAAA,QAAQ,CAAC;EAEP,YAAY,EMqIJ,aAAiC,GNpI1C"
+}
