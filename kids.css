@@ -2,12 +2,17 @@ main{
     background-color: #ABFF4F ;
 }
 header{
-    margin: 3px;
+    margin: 0px auto;
     padding: 6px;
-    overflow: hidden;
+
+    text-align: center;
+    justify-content: center;
 }
 header, nav{
-    background-color: #08bdbd
+    background-color: #08bdbd;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
 
 }
 body{
@@ -17,8 +22,8 @@ body{
 }
 
 footer{
-        font-family: 'Shadows Into Light', monospace, cursive;
-        font-size: 8px;
+    font-family: 'Shadows Into Light', monospace, cursive;
+    font-size: 8px;
 }
 
 h1 {
@@ -34,7 +39,7 @@ p{
 .cat {
     height:400px;
     width: 400px;
- background: url(KIDSimages/cat.svg); 
+    background: url(KIDSimages/cat.svg); 
     background-color:white;
     background-repeat: no-repeat;
 }
@@ -42,7 +47,7 @@ p{
 .dog {
     height:400px;
     width: 400px;
- background: url(KIDSimages/dog.svg);
+    background: url(KIDSimages/dog.svg);
     background-color: white;
     background-repeat: no-repeat;
 }
@@ -50,7 +55,7 @@ p{
 .cow {
     height:400px;
     width: 400px;
- background: url(KIDSimages/cow.svg);
+    background: url(KIDSimages/cow.svg);
     background-color: #08BDBD;
     background-repeat: no-repeat;
 }
@@ -60,91 +65,62 @@ p{
 nav{
     background-color: white;
     width:392px;
-    margin: -15px;
+    margin: 0 auto;
     padding:2px;
 }
-.home #home {
-    background-image: url(KIDSimages/barn.svg);
-    background-color: white;
-    background-repeat: no-repeat;
-    width:300px;
-    height:113px;
-    padding: 40px;
-    overflow:hidden;
-}
 
-.about #about {
-    background-image: url(KIDSimages/dog.svg);
-    background-color: white;
-    background-repeat: no-repeat;
-    width:100px;
-    height:113px;
-    margin: 1px;
-    padding: 50px;
+
+
+#container {
+    width: 200px;
+    height: 229px;
     overflow: hidden;
+    position: relative;
 }
-.gallery {
-    background-image: url(KIDSimages/cow.svg);
-    background-repeat: no-repeat;
+    
+#cat {
+    background: url(KIDSimages/cat.svg);
     background-color: white;
-    width:100px;
-    height:113px;
-    margin: 1px;
-    padding:50px;
-    padding-right: 64px;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 229px;
+    left: 1px;
+    top: 1px;
     
 }
     
-    body {
-        
-    }
+#dog {
+    background: url(KIDSimages/dog.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 229px;
+    left: 1px;
+    top: 1px;
+}
+    
+#cow {
+    background: url(KIDSimages/cow.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 229px;
+    left: 1px;
+    top: 1px;
+}  
 
-    #container {
-        width: 200px;
-        height: 229px;
-        overflow: hidden;
-        position: relative;
-    }
-        
-    #cat {
-        background: url(KIDSimages/cat.svg);
-        background-color: white;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 229px;
-        left: 1px;
-        top: 1px;
-        position: absolute;
-    }
-        
-    #dog {
-        background: url(KIDSimages/dog.svg);
-        background-color: white;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 229px;
-        left: 1px;
-        top: 1px;
-        position: absolute;
-    }
-        
-    #cow {
-        background: url(KIDSimages/cow.svg);
-        background-color: white;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 229px;
-        left: 1px;
-        top: 1px;
-        position: absolute;
-    }        
-        
-    button {
-        padding: 10px;
-        margin: 0 10px 10px 0;
-    }
-    h2 {
+
+#container {
+margin: 0 auto;
+}      
+
+
+  
+button {
+    padding: 10px;
+    
+}
+h2 {
 
     font-family: 'Shadows Into Light', monospace, cursive;
     font-size: 16px;
@@ -153,189 +129,118 @@ nav{
      
 
 
-	@media (max-width: 415px){ 
-      body {
-           
-} 
+@media (max-width: 415px){ 
     header{
         background-color: #FF9914;
-        margin-left: 2px;
+        
         margin-top: -10px;
     }
-        #container {
-            margin-left: 100px;
-        }
-        h2{
-            margin-left: 140px;
-        }
+    #container {
         
+    }
+    h2{
+        
+    }    
     main { 
           float:none;
           width: 100%; 
           align-content: center;
-          justify-content: center;
-          margin-right: -20px;
-        }
-        
+          justify-content: center;     
+    }
+} 
 
-   
-      } 
-    
-      @media (min-width: 600px){ 
-        body {
-          float:none;
-          width: 65%; 
-          align-content: center;
-          justify-content: center;
-          margin-left: 120px;
-          margin-top: 5px;}
-}
+
+
+
 nav{
     align-content: center;
     justify-content: center;
-    margin-left: 50px;
+    margin: 0 auto;
+
 }
 
 header{
     width: 510px;
-    margin-left: -3px;
+    margin: 0 auto;
     align-content: center;
     justify-content: center;
 }
 
 h1{
-    margin-left: 70px;
+    
 }
+
 p{
     align-content: center;
-    margin-left: 10px;
+ 
 }
           
- h2{
-    margin-left: 175px;
-          }
-#container {
-    margin-left: 125px;
-          }
-
-.home #home {
-    background-image: url(KIDSimages/barn.svg);
-    background-color: white;
-    background-repeat: no-repeat;
-    width:103px;
-    height:90px;
-    margin: 2px;
-    margin-left: 37px;
-    margin-right: 2px;
-    padding: 30px;
-    align-content: center;
-    justify-content: center;
-    
-    overflow:hidden;
+h2{
 }
 
-.about #about {
-    background-image: url(KIDSimages/dog.svg);
-    background-color: white;
-    background-repeat: no-repeat;
-    width: 103px;
-    height: 100px;;
-    margin: 2px;
-    margin-left: 20px;
-    padding: 30px;
-    align-content: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.gallery {
-    background-image: url(KIDSimages/cow.svg);
-    background-repeat: no-repeat;
-    background-color: white;
-    width:103px;
-    height:100px;;
-    margin: 2px;
-    margin-left: 34px;
-    padding:50px;
-    align-content: center;
-    justify-content: center;
-    
-    overflow: hidden;
-       }
 
-       @media screen and (min-width: 900px) {
-        body { 
-          float:none;
-          width: 75%; 
-          align-content: center;
-          justify-content: center;
-          margin-left: 100px;
-          margin-top: 5px;
-        }
+
+
+@media screen and (min-width: 900px) {
+    body { 
+        float:none;
+        align-content: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
     header {
-        width:1500px;
+        width:900px;
         height: auto;
         justify-content: center;
-        margin-left: -20px;
+        text-align: center;
+        margin: 0 auto;
         margin-top: 55px;
-           }
-           
-    h1{
-        margin-left:560px;
-           }
-           h2{
-               margin-left: 450px;
-           }
-           
-     p{
-        margin-left: 500px;
-           }
-           
-     nav{
+    }
+    nav{
         background-color: white;
-        width:1450px;
-            margin-left: 25px;
-}
-.home #home {
-    background-image: url(KIDSimages/barn.svg);
-    background-repeat: no-repeat;
-    width:200px;
-    height:auto;
-    margin: 10px;
-    margin-left: 250px;
-    padding: 50px;
-    padding-right: 10px;
-    overflow:hidden;
+        text-align:center;
+        justify-content: center;
+        
+        margin: 0 auto;
+        margin-top: 5px;
+        display:inline-block;
+    }         
+    main{
+        
+        margin: 0 auto;
+        width: 600px;
+    }
 }
 
-.about #about {
-    background-image: url(KIDSimages/dog.svg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height:auto;
-    margin: 10px;
-    margin-left: 250px;
-    padding: 50px;
-    padding-right: 10px;
-    overflow: hidden;
+.animalText {
+    text-align: center;
 }
-.gallery {
-    background-image: url(KIDSimages/cow.svg);
-    background-repeat: no-repeat;
-    width:200px;
-    height:auto;
-    margin: 10px;
-    margin-left: 250px;
-    padding:50px;
-    padding-right: 10px;
-    overflow: hidden;
-    
+
+
+.nav a{ 
+ z-index: 1;
 }
-     
-           #container{
-               margin-left: 400px;
-           }
-           
-    main{
-        margin-left: 200px;
-           }
-      }
+
+@media (min-width: 600px){ 
+    body {
+        width: 65%; 
+        align-content: center;
+        justify-content: center;
+        display: flex;   
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    main { 
+          float:none;
+          width:  600px; 
+          align-content: center;
+          margin: 0 auto;
+          justify-content: center;     
+    }
+}
+
+header{
+    margin-bottom: 20px;
+}

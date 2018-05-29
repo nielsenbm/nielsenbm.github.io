@@ -13,7 +13,11 @@ header {
     background-color: #08bdbd;
     width: 400px;
     height:auto;
+            justify-content: center;
+        text-align: center;
+        margin: 0 auto;
     margin-bottom: auto;
+
     padding: 20px;
     justify-content: center;
     
@@ -117,7 +121,7 @@ main {
            }
            
            h1{
-               margin-left:450px;
+
            }
            
            nav{
