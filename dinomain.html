@@ -21,8 +21,30 @@
 	
 	<!-- My javascript example puzzle demo -->
 	<script type="text/javascript">
+  var canvas;
+
+
+var x = 0;
+function myResizeFunction(newWidth) {
+    if (canvas.width != newWidth) {
+            var scaleMultiplier = newWidth / canvas.width;
+            var objects = canvas.getObjects();
+            for (var i in objects) {
+                objects[i].scaleX = objects[i].scaleX * scaleMultiplier;
+                objects[i].scaleY = objects[i].scaleY * scaleMultiplier;
+                objects[i].left = objects[i].left * scaleMultiplier;
+                objects[i].top = objects[i].top * scaleMultiplier;
+                objects[i].setCoords();
+            }
+            canvas.discardActiveObject();
+            canvas.setWidth(canvas.getWidth() * scaleMultiplier);
+            canvas.setHeight(canvas.getHeight() * scaleMultiplier);
+            canvas.renderAll();
+            canvas.calcOffset();      
+}
+}
         $( document ).ready(function() {
-            var canvas = new fabric.Canvas('my_canvas', { selection: false });
+        canvas = new fabric.Canvas('my_canvas', { selection: false });
 			fabric.util.loadImage('content/images/dino.jpg', function (img) {
 
 				var num_vertical_pieces = 4;
@@ -91,6 +113,17 @@
 			});
         	canvas.renderAll();
         });
+
+
+    $( window ).on( "load", function() {
+        myResizeFunction( $( window ).width()*0.75 );
+    });
+
+        $( window ).resize(function() {
+  myResizeFunction( $( window ).width()*0.75 );
+});
+
+
         </script>
 
     <!-- style -->
@@ -139,7 +172,8 @@ li a:hover:not(.active) {
         }
         
         #bannerimg {
-            padding-left: 270px;
+            width: 85%;
+            height: auto;
             text-align: center;
             display: block;
             margin: auto;
@@ -155,7 +189,8 @@ li a:hover:not(.active) {
             padding-left: 20px;
         }
         .header {
-            width:1175px;
+            width:85%;
+            margin: auto;
         }
 </style>
     
