@@ -7,12 +7,10 @@
   <meta name="BMN" content="Experimental">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" href="content/images/favicon.png">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- FONT -->
  <link href="https://fonts.googleapis.com/css?family=Abel|Piedra" rel="stylesheet">
   <!-----css and jquery sheets -->
   <link rel="stylesheet" href="content/styles/dinostyle.css">
@@ -70,8 +68,8 @@
 		        		accessor++;
 
 			            var rect = new fabric.Rect({ 
-			              left: (piece_bufferX+piece_sizeY)*(num_horizontal_pieces-i), 
-			              top: (piece_bufferY+piece_sizeX)*(num_vertical_pieces-j), 
+			              left: (piece_bufferX+piece_sizeY)*(num_horizontal_pieces-i)-200, 
+			              top: (piece_bufferY+piece_sizeX)*(num_vertical_pieces-j) - 200, 
 			              width: piece_sizeX, 
 			              height: piece_sizeY, 
 			              fill: '#9f9', 
@@ -104,7 +102,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: scroll;
+    overflow: hidden;
     background-color: #333;
     position: fixed;
     bottom: 0;
@@ -125,15 +123,32 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #c96232;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #bfbb95;
 }
         
         .container{
             position: absolute; 
+            margin: auto;
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        #bannerimg {
+            padding-left: 200px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            
+        }
+        
+        body, .container, container, .row, li {
+            border: none;
+            justify-content: center;
         }
 </style>
     
@@ -150,18 +165,13 @@ li a:hover:not(.active) {
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <img src="content/images/Banner.jpg" width="1200px" height="200px">   
+      <img id="bannerimg" src="content/images/Banner.jpg" width="1200px" height="200px">   
     <div class="row">
       <div class="one-half column" style="margin-top: 1%; margin-left: 1%">
               
     <div class="wrapper">
   <header class="header">Welcome to the dig! Get your hands dirty and piece together the fossil.</header>
-        <canvas id="my_canvas" width=1575 height=1500></canvas>
-  <article class="content">
-    <h1>2 column, header and footer</h1>
-    <p>This example uses line-based positioning, to position the header and footer, stretching them across the grid.</p>
-  </article>
-  <footer class="footer">My footer</footer>
+        <canvas id="my_canvas" width=1175 height=1170></canvas>
 </div>
       </div>
     </div>
