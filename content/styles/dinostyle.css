@@ -1,12 +1,18 @@
-*, *:before, *:after {
+*, *:before {
   box-sizing: border-box;
-    border: #c1b3a2 dashed;
+   
+}
+
+*:after{
+     box-sizing: border-box;
+     border: #c1b3a2 dashed;
 }
 
 body {
   margin: 40px;
   font-family: 'Open Sans', 'sans-serif';
   background-color: #c96232;
+    border: dashed;
   color: #7c7467;
   outline-color: #f7f5cf;
 border: #c1b3a2 dashed;

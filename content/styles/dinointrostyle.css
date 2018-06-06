@@ -18,11 +18,11 @@
   width: 600px;
 }
 
-.panel, ul, header {
-  background-color: #c96232;
+.panel, ul, header{
+    background-color: #c96232;
   color: #7c7467;
   outline-color: #f7f5cf;
-  border: #c1b3a2 dashed;
+  border: none;
   padding: 10px;
   margin: 10px auto;
 }
