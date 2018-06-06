@@ -6,61 +6,57 @@
   <meta name="Kids" content="KidsSite">
   <meta name="BMN" content="Kids Site content page">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="KIDSimages/barn.ico">    
+  <link rel="icon" type="image/png" href="content/images/KIDSimages/barn.ico">    
   <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Henny+Penny|Shadows+Into+Light" rel="stylesheet">
-    
+  <link href="https://fonts.googleapis.com/css?family=Henny+Penny|Shadows+Into+Light" rel="stylesheet">
+
   <!-- css and jquery sheets -->
 
-    <link rel="stylesheet" type="text/css" href="output.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="alphabet.js"></script>
-    <script type="text/javascript" src="bubbles.js"></script>
-    <script type="text/javascript" src="kids.js"></script>
-    
-      <!-- Favicon -->
+  <link rel="stylesheet" type="text/css" href="content/styles/output.css">
+  <link rel="stylesheet" type="text/css" href="content/styles/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="content/javascript/alphabet.js"></script>
+  <script type="text/javascript" src="content/javascript/kids.js"></script>
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  </head>
+</head>
 
 <body>
-
   <!-- Primary Page Layout --> 
-    <header>
-        <h1>WELCOME TO THE FARM!</h1>
+  <header>
+    <h1>WELCOME TO THE FARM!</h1>
     
-<nav class="topnav" id="myTopnav">
-    <a id="home" href="kidsintro.html"><img src="KIDSimages/barn.svg" height="113" width="100" border="1"></a>
-    <a id="about" href="aboutme.html"><img src="KIDSimages/dog.svg" height="113" width="100" border="1"></a>
-    <a id="gallery" href="gallery.html"><img src="KIDSimages/cow.svg" height="113" width="100" border="1"></a>
-</nav>
-    </header>
-        <main>
-			 <a id="mylink" href="kids.html">
-                 <div class="content-section">
-	               <canvas id="myCanvas" width="500" height="500"></canvas>
-        <script type="text/javascript" src="bubbles.js"></script>
-                        
-        <script>
-	        var myName = "Click here to visit";
-            
-            var red = [2, 75, 75];
-            var yellow = [50, 100, 60];
-            var green = [75, 100, 40];
-            var blue = [240, 35, 55];
-            var purple = [280, 50, 30];
-            var letterColors = [red, yellow, green, blue, purple]; 
-            
-            drawName(myName, letterColors, 0.25);
-                bubbleShape = 'circle';
-                bounceBubbles(); 
-	   </script>
-                </div>
-            </a>
-        </main>
-            <footer>
-                <p>Bubbles animation inspired by codecademy &copy;</p>
-            </footer>
+    <nav class="topnav" id="myTopnav">
+      <a id="home" href="index.html"><img src="content/images/KIDSimages/barn.svg" height="113" width="100" border="1" title="Return to main page"></a>
+      <a id="about" href="aboutme.html"><img src="content/images/KIDSimages/dog.svg" height="113" width="100" border="1" title="About Me"></a>
+      <a id="gallery" href="gallery.html"><img src="content/images/KIDSimages/cow.svg" height="113" width="100" border="1" title="Dog Gallery"></a>
+    </nav>
+  </header>
+  <main>
+    <a id="mylink" href="kids.html">
+     <div class="content-section">
+      <canvas id="myCanvas" width="500" height="500"></canvas>
+      <!-- Must be included after canvas or will not work -->
+      <script type="text/javascript" src="content/javascript/bubbles.js"></script>
+      <script>
+       var myName = "Click here to visit";
+       var red = [2, 75, 75];
+       var yellow = [50, 100, 60];
+       var green = [75, 100, 40];
+       var blue = [240, 35, 55];
+       var purple = [280, 50, 30];
+       var letterColors = [red, yellow, green, blue, purple]; 
+       drawName(myName, letterColors, 0.25);
+       bubbleShape = 'circle';
+       bounceBubbles(); 
+     </script>
+   </div>
+ </a>
+</main>
+<footer>
+  <p>Bubbles animation inspired by codecademy &copy;</p>
+</footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
  <link href="https://fonts.googleapis.com/css?family=Abel|Piedra" rel="stylesheet">
-  <!-----css and jquery sheets----->
-  <link rel="stylesheet" href="dinostyle.css">
-    <script src="jquery.min.js"></script>
+  <!-----css and jquery sheets -->
+  <link rel="stylesheet" href="content/styles/dinostyle.css">
+    <script src="content/javascript/jquery.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.7/fabric.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 	<script type="text/javascript">
         $( document ).ready(function() {
             var canvas = new fabric.Canvas('my_canvas', { selection: false });
-			fabric.util.loadImage('dino.jpg', function (img) {
+			fabric.util.loadImage('content/images/dino.jpg', function (img) {
 
 				var num_vertical_pieces = 4;
 				var num_horizontal_pieces = 4;
@@ -150,7 +150,7 @@ li a:hover:not(.active) {
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <img src="Banner.jpg" width="1200px" height="200px">   
+      <img src="content/images/Banner.jpg" width="1200px" height="200px">   
     <div class="row">
       <div class="one-half column" style="margin-top: 1%; margin-left: 1%">
               

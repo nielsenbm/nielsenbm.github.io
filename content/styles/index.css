@@ -1,0 +1,43 @@
+.indeximage {
+  /*padding: .0001em;*/
+  padding-top: -5em;
+  margin:-.50em;
+  margin-top: 2em;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+.footertext {
+  text-align: center;
+}
+
+@media(min-width: 900px)
+{
+  img {
+    max-width: 700px;
+    max-height: auto;
+    margin: auto;
+  }
+}
+
+.footertext {
+  color: #d8d8d8;
+}
+
+@media (max-width: 404px) { 
+  body {
+    background-color: #270922;
+  }
+}
+
+@media (min-width: 405px) {
+  body{
+    background-color: #66b2b2;
+  }
+}
+@media (min-width: 900px){ 
+  body {
+    background-color: #501037;
+  }
+}
+

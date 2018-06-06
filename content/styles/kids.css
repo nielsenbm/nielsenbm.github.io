@@ -39,7 +39,7 @@ p{
 .cat {
     height:400px;
     width: 400px;
-    background: url(KIDSimages/cat.svg); 
+    background: url(../images/KIDSimages/cat.svg); 
     background-color:white;
     background-repeat: no-repeat;
 }
@@ -47,7 +47,7 @@ p{
 .dog {
     height:400px;
     width: 400px;
-    background: url(KIDSimages/dog.svg);
+    background: url(../images/KIDSimages/dog.svg);
     background-color: white;
     background-repeat: no-repeat;
 }
@@ -55,7 +55,7 @@ p{
 .cow {
     height:400px;
     width: 400px;
-    background: url(KIDSimages/cow.svg);
+    background-image : url("../images/KIDSimages/cow.svg");
     background-color: #08BDBD;
     background-repeat: no-repeat;
 }
@@ -79,7 +79,7 @@ nav{
 }
     
 #cat {
-    background: url(KIDSimages/cat.svg);
+    background: url(../images/KIDSimages/cat.svg);
     background-color: white;
     background-repeat: no-repeat;
     width: 200px;
@@ -90,7 +90,7 @@ nav{
 }
     
 #dog {
-    background: url(KIDSimages/dog.svg);
+    background: url(../images/KIDSimages/dog.svg);
     background-color: white;
     background-repeat: no-repeat;
     width: 200px;
@@ -100,7 +100,7 @@ nav{
 }
     
 #cow {
-    background: url(KIDSimages/cow.svg);
+    background-image: url("../images/KIDSimages/cow.svg");
     background-color: white;
     background-repeat: no-repeat;
     width: 200px;
